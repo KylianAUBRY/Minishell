@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:14:12 by kylian            #+#    #+#             */
-/*   Updated: 2023/08/12 17:15:13 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 17:22:33 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ char	*ft_chr_dol(char *str, int i, t_shell *shell)
 
 	tmp = i;
 	j = 0;
-	if (str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0' || str[i + 1] == '\'' || str[i + 1] == '\"')
+	if (str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0' || str[i
+			+ 1] == '\'' || str[i + 1] == '\"')
 		return (ft_strdup("$"));
 	while (str[++i] && ft_chr_char_2(str[i]) == 0)
 		j++;

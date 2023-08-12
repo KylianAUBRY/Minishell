@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 14:57:10 by kyaubry           #+#    #+#             */
-/*   Updated: 2023/08/12 16:52:46 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 17:22:51 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_export_no_args(t_shell *shell)
 	while (shell->var_global.tab[++j])
 	{
 		tab[j] = ft_strdup_join(shell->var_global.tab[j][0],
-			shell->var_global.tab[j][1]);
+				shell->var_global.tab[j][1]);
 		if (!tab)
 			return (ft_free_line_export(tab));
 	}
