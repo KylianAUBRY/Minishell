@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:06:38 by kylian            #+#    #+#             */
-/*   Updated: 2023/08/12 14:00:10 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 17:13:21 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_strlen_double_quot(char *dest, char *str, t_shell *shell)
 	return (count + ft_strlen(dest) + 1);
 }
 
-char	*ft_cpy_tmp_to_dest(char *dest, char *tmp)
+char	*ft_cpy_tmp_to_dest(char *dest, char *tmp, int *k)
 {
 	int	i;
 	int	j;
@@ -78,11 +78,11 @@ char	*ft_cpy_tmp_to_dest(char *dest, char *tmp)
 		i++;
 	while (tmp[++j])
 	{
-		dest[i] = tmp[j];
-		i++;
+		dest[i + j] = tmp[j];
 	}
-	dest[i] = '\0';
+	dest[i + j] = '\0';
 	free(tmp);
+	*k = (i + j);
 	return (dest);
 }
 
@@ -101,7 +101,7 @@ char	*ft_strjoin_double_quot_2(char *str, char *new_dest, int i,
 			tmp = ft_chr_dol(str, i, shell);
 			if (!tmp)
 				return (NULL);
-			new_dest = ft_cpy_tmp_to_dest(new_dest, tmp);
+			new_dest = ft_cpy_tmp_to_dest(new_dest, tmp, &j);
 			while (str[++i] && str[i] != '\'' && str[i] != '\"' && str[i] != ' '
 				&& str[i] != '\t' && str[i] != '>' && str[i] != '<'
 				&& str[i] != '|')
