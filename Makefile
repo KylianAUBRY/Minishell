@@ -43,6 +43,7 @@ SRCS	=	main.c	\
 			cmd_custom/ft_export_3.c \
 			cmd_custom/ft_export_4.c \
 			cmd_custom/ft_unset.c \
+			cmd_custom/ft_unset_2.c \
 			cmd_custom/ft_env.c \
 			cmd_custom/ft_exit.c \
 

@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 00:07:23 by kyaubry           #+#    #+#             */
-/*   Updated: 2023/08/11 16:57:30 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 14:42:42 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int	ft_fill_tab_env(char **envp, t_shell *shell)
 		if (!shell->var_global.tab[i][0])
 			return (ft_free_tab(shell));
 		shell->var_global.tab[i][1] = ft_strdup(envp[i]
-				+ ft_strlen_char(envp[i], '=') + 2);
+				+ ft_strlen_char(envp[i], '=') + 1);
 		if (!shell->var_global.tab[i][1])
 			return (ft_free_tab(shell));
 	}

@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:24:37 by kyaubry           #+#    #+#             */
-/*   Updated: 2023/08/11 16:56:33 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 15:12:19 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,6 +209,7 @@ int				ft_cd(char **args);
 int				ft_env(t_shell *shell);
 int				ft_exit(char **args, char **cmd, t_shell *shell);
 int				ft_unset(char **args, t_shell *shell);
+int				ft_check_int_tab(char *name, t_shell *shell);
 
 /* ========= export function ========= */
 int				ft_export(char **args, t_shell *shell);

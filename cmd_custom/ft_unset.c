@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 17:23:52 by kyaubry           #+#    #+#             */
-/*   Updated: 2023/08/11 16:50:51 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 15:11:58 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ static int	ft_unset_2(char *name, t_shell *shell)
 	int		j;
 
 	i = 0;
+	if (ft_check_int_tab(name, shell) == 0)
+		return (0);
 	while (shell->var_global.tab[i] != NULL)
 		i++;
 	tab = malloc(sizeof(char ***) * (i));

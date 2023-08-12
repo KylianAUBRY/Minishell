@@ -6,15 +6,15 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 14:04:05 by kyaubry           #+#    #+#             */
-/*   Updated: 2023/08/12 14:04:44 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 14:25:39 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minishell.h"
 
-int ft_strcmp_n(char *args)
+int	ft_strcmp_n(char *args)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (args && args[i] == '-')

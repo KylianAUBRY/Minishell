@@ -6,7 +6,7 @@
 /*   By: kyaubry <kyaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:57:06 by kylian            #+#    #+#             */
-/*   Updated: 2023/08/12 13:41:20 by kyaubry          ###   ########.fr       */
+/*   Updated: 2023/08/12 14:29:41 by kyaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int	ft_chr_i_other(char *str, int i)
 {
 	if (str[i] == '$')
 	{
+		if (str[i + 1] == '?')
+			return (i + 2);
 		while (str[++i] && str[i] != '\'' && str[i] != '\"' && str[i] != ' '
 			&& str[i] != '\t' && str[i] != '>' && str[i] != '<'
 			&& str[i] != '|')
